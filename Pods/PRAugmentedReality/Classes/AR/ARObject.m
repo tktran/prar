@@ -66,13 +66,16 @@ andCurrentLocation:(CLLocationCoordinate2D)currLoc
     CLLocation *user_location = [[CLLocation alloc] initWithLatitude:user_loc_coord.latitude
                                                             longitude:user_loc_coord.longitude];
     
+    NSLog(@"Object location: %@; \n User_location: %@", object_location, user_location);
     return [object_location distanceFromLocation:user_location];
 }
 -(NSString*)getDistanceLabelText
 {
-    if (distance.doubleValue > POINT_ONE_MILE_METERS)
-         return [NSString stringWithFormat:@"%.2f mi", distance.doubleValue*METERS_TO_MILES];
-    else return [NSString stringWithFormat:@"%.0f ft", distance.doubleValue*METERS_TO_FEET];
+//    if (distance.doubleValue > POINT_ONE_MILE_METERS)
+//         return [NSString stringWithFormat:@"%.2f mi", distance.doubleValue*METERS_TO_MILES];
+//    else return [NSString stringWithFormat:@"%.0f ft", distance.doubleValue*METERS_TO_FEET];
+    
+    return [NSString stringWithFormat:@"%.2f m", distance.doubleValue];
 }
 
 - (NSDictionary*)getARObjectData

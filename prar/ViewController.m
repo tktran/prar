@@ -35,7 +35,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    CLLocationCoordinate2D locationCoordinates = CLLocationCoordinate2DMake(0.0, 0.0);
+    CLLocationCoordinate2D locationCoordinates = CLLocationCoordinate2DMake(33.782674, -118.108972);
     
     [[PRARManager sharedManager] startARWithData:[self getDummyData] forLocation:locationCoordinates];
     
@@ -47,21 +47,21 @@
     NSArray *dummyData = @[
                            @{
                                @"id" : @(0),
-                               @"lat" : @(-48.02442454554005F),
-                               @"long" : @(-222),
-                               @"title" : @"Place Num 0"
+                               @"lat" : @(33.785063F),
+                               @"lon" : @(-118.112F),
+                               @"title" : @"Prospector"
                                },
                            @{
                                @"id" : @(1),
-                               @"lat" : @(7.5278965708798568F),
-                               @"long" : @(207.3884705083325F),
-                               @"title" : @"Place Num 1"
+                               @"lat" : @(33.781046F),
+                               @"lon" : @(-118.111105F),
+                               @"title" : @"Gustavo"
                                },
                            @{
                                @"id" : @(2),
-                               @"lat" : @(88.00517389006646F),
-                               @"long" : @(-307.6122395161201F),
-                               @"title" : @"Place Num 2"
+                               @"lat" : @(33.785928F),
+                               @"lon" : @(-118.114712F),
+                               @"title" : @"Miguel"
                                }
                            ];
     return dummyData;
